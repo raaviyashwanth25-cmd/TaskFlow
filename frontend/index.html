@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>TaskFlow</h1>
+    <p>Organize your work, one task at a time.</p>
+</header>
+<main>
+<!-- Login Section -->
+<section id="loginSection" class="auth-section">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input
+            type="email"
+            id="loginEmail"
+            placeholder="Enter your email"
+            required
+        >
+        <input
+            type="password"
+            id="loginPassword"
+            placeholder="Enter your password"
+            required
+        >
+        <button type="submit">Login</button>
+    </form>
+    <p id="loginMessage" role="status"></p>
+    <p>
+        Don't have an account?
+        <button type="button" id="showSignup">Sign Up</button>
+    </p>
+</section>
+<!-- Signup Section -->
+<section id="signupSection" class="auth-section" hidden>
+    <h2>Create Account</h2>
+    <form id="signupForm">
+        <input
+            type="text"
+            id="signupName"
+            placeholder="Enter your name"
+            required
+        >
+        <input
+            type="email"
+            id="signupEmail"
+            placeholder="Enter your email"
+            required
+        >
+        <input
+            type="password"
+            id="signupPassword"
+            placeholder="Create a password (minimum 8 characters)"
+            minlength="8"
+            required
+        >
+        <button type="submit">Create Account</button>
+    </form>
+    <p id="signupMessage" role="status"></p>
+    <p>
+        Already have an account?
+        <button type="button" id="showLogin">Login</button>
+    </p>
+</section>
+<!-- TaskFlow Dashboard -->
+<section id="dashboardSection" class="task-section" hidden>
+    <div class="dashboard-heading">
+        <h2>My Tasks</h2>
+        <button type="button" id="logoutButton">Logout</button>
+    </div>
+    <p id="welcomeMessage"></p>
+    <form id="taskForm">
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter a new task..."
+            required
+        >
+        <button type="submit">Add Task</button>
+    </form>
+    <p id="message" role="status"></p>
+    <ul id="taskList"></ul>
+</section>
+</main>
+<footer>
+    <p>TaskFlow Capstone Project</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

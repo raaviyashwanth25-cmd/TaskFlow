@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    }
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: #f4f6f8;
+color: #333;
+}
+
+header {
+background-color: #2c3e50;
+color: white;
+text-align: center;
+padding: 25px;
+}
+
+header h1 {
+margin-bottom: 8px;
+}
+
+main {
+width: 90%;
+max-width: 650px;
+margin: 40px auto;
+}
+
+/* Login and Signup cards */
+.auth-section,
+.task-section {
+background-color: white;
+padding: 25px;
+border-radius: 6px;
+border: 1px solid #ddd;
+}
+
+.auth-section {
+max-width: 450px;
+margin: 0 auto;
+}
+
+.auth-section h2,
+.task-section h2 {
+margin-top: 0;
+}
+
+/* Login and Signup forms */
+#loginForm,
+#signupForm {
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.auth-section input {
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 15px;
+}
+
+.auth-section p {
+line-height: 1.5;
+}
+
+.auth-section button {
+margin-top: 4px;
+}
+
+button {
+padding: 12px 16px;
+border: none;
+border-radius: 4px;
+background-color: #2878b5;
+color: white;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #1c5c8a;
+}
+
+button:focus-visible,
+input:focus-visible {
+outline: 2px solid #2878b5;
+outline-offset: 2px;
+}
+
+#loginMessage,
+#signupMessage,
+#message {
+margin-top: 15px;
+overflow-wrap: anywhere;
+}
+
+/* Dashboard heading and Logout button */
+.dashboard-heading {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 12px;
+margin-bottom: 15px;
+}
+
+.dashboard-heading h2 {
+margin-bottom: 0;
+}
+
+#logoutButton {
+background-color: #c0392b;
+}
+
+#logoutButton:hover {
+background-color: #922b21;
+}
+
+/* Add-task form */
+#taskForm {
+display: flex;
+gap: 10px;
+}
+
+#taskInput {
+flex: 1;
+min-width: 0;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+/* Task list */
+#taskList {
+list-style: none;
+padding: 0;
+}
+
+.task-item {
+display: flex;
+align-items: center;
+gap: 10px;
+padding: 12px 0;
+border-bottom: 1px solid #eee;
+}
+
+.task-title {
+flex: 1;
+overflow-wrap: anywhere;
+}
+
+.completed {
+text-decoration: line-through;
+color: #777;
+}
+
+.delete-button {
+background-color: #c0392b;
+}
+
+.delete-button:hover {
+background-color: #922b21;
+}
+
+footer {
+text-align: center;
+padding: 20px;
+color: #666;
+}
+
+/* Mobile layout */
+@media (max-width: 480px) {
+#taskForm {
+flex-direction: column;
+}
+
+.task-section,
+.auth-section {
+    padding: 18px;
+}
+.dashboard-heading {
+    flex-wrap: wrap;
+}
+
+}
